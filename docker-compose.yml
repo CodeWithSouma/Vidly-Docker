@@ -15,6 +15,7 @@ services:
             - DB_URL=mongodb://database/vidly
         volumes: 
             - ./backend:/app
+        command: ["sh", "docker-entrypoint.sh"]
     database:
         image: mongo:4.0-xenial
         ports: 
